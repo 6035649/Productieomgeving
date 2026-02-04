@@ -4,38 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persoonlijke Informatie Formulier</title>
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
-    <h1>Aanvraag nieuwsbrief</h1>
-    <form action="#" method="post">
-        <label for="voornaam">Wat is uw voornaam?</label><br>
-        <input type="text" id="voornaam" name="voornaam" required><br><br>
+    <main class="container">
+        <h1>Aanvraag nieuwsbrief</h1>
+        <form class="newsletter" action="#" method="post" novalidate>
+            <div class="grid">
+                <div class="field"><label class="sr-only" for="voornaam">Wat is uw voornaam?</label><input type="text" id="voornaam" name="voornaam" placeholder="Wat is uw voornaam?" required></div>
+                <div class="field"><label class="sr-only" for="tussenvoegsel">Heeft u een tussenvoegsel?</label><input type="text" id="tussenvoegsel" name="tussenvoegsel" placeholder="Heeft u een tussenvoegsel?"></div>
+                <div class="field"><label class="sr-only" for="achternaam">Wat is uw achternaam?</label><input type="text" id="achternaam" name="achternaam" placeholder="Wat is uw achternaam?" required></div>
 
-        <label for="tussenvoegsel">Heeft u een tussenvoegsel?</label><br>
-        <input type="text" id="tussenvoegsel" name="tussenvoegsel"><br><br>
+                <div class="field street"><label class="sr-only" for="straat_huisnummer">Wat is uw straatnaam en huisnummer?</label><input type="text" id="straat_huisnummer" name="straat_huisnummer" placeholder="Wat is uw straatnaam en huisnummer?" required></div>
+                <div class="field"><label class="sr-only" for="email">Wat is uw email adres?</label><input type="email" id="email" name="email" placeholder="Wat is uw email adres?" required></div>
 
-        <label for="achternaam">Wat is uw achternaam?</label><br>
-        <input type="text" id="achternaam" name="achternaam" required><br><br>
+                <div class="field"><label class="sr-only" for="postcode">Wat is uw postcode?</label><input type="text" id="postcode" name="postcode" placeholder="Wat is uw postcode?" required></div>
+                <div class="field"><label class="sr-only" for="woonplaats">Wat is uw woonplaats?</label><input type="text" id="woonplaats" name="woonplaats" placeholder="Wat is uw woonplaats?" required></div>
+                <div class="field"><label class="sr-only" for="telefoonnummer">Wat is uw telefoonnummer?</label><input type="tel" id="telefoonnummer" name="telefoonnummer" placeholder="Wat is uw telefoonnummer" required></div>
+            </div>
 
-        <label for="straat_huisnummer">Wat is uw straatnaam en huisnummer?</label><br>
-        <input type="text" id="straat_huisnummer" name="straat_huisnummer" required><br><br>
+            <div class="consent">
+                <input type="checkbox" id="voorwaarden" name="voorwaarden" required>
+                <label for="voorwaarden">Ik ga akkoord met de voorwaarden zoals vermeld op de website!</label>
+            </div>
 
-        <label for="email">Wat is uw email adres?</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="postcode">Wat is uw postcode?</label><br>
-        <input type="text" id="postcode" name="postcode" required><br><br>
-
-        <label for="woonplaats">Wat is uw woonplaats?</label><br>
-        <input type="text" id="woonplaats" name="woonplaats" required><br><br>
-
-        <label for="telefoonnummer">Wat is uw telefoonnummer?</label><br>
-        <input type="tel" id="telefoonnummer" name="telefoonnummer" required><br><br>
-
-        <input type="checkbox" id="voorwaarden" name="voorwaarden" required>
-        <label for="voorwaarden">Ik ga akkoord met de voorwaarden zoals vermeld op de website!</label><br><br>
-
-        <input type="submit" value="Verzenden">
-    </form>
+            <div class="actions">
+                <input class="btn" type="submit" value="Verzenden">
+            </div>
+        </form>
+    </main>
 </body>
 </html>
